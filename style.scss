@@ -1,0 +1,236 @@
+$fa-font-path: './src/fa/webfonts';
+@import './src/fa/scss/fontawesome.scss';
+@import './src/fa/scss/solid.scss';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: url('./src//img/Plantilla\ Puntos.png') #323133;
+  background-size: cover;
+  background-position: 0 125px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    border: none;
+  }
+
+  h1 {
+    font-weight: 100;
+  }
+
+  .mobile-menu-btn {
+    height: 65px;
+    width: 65px;
+    background-color: #232224;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 2vh;
+    right: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9001;
+
+    .burger {
+      width: 32px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.752);
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+
+      &::before {
+        content: '';
+        width: 32px;
+        height: 4px;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.752);
+        border-radius: 5px;
+        transform: translateY(-10px);
+        transition: all 0.5s ease-in-out;
+      }
+
+      &::after {
+        content: '';
+        width: 32px;
+        height: 4px;
+        display: block;
+        transform: translateY(6px);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.752);
+        transition: all 0.5s ease-in-out;
+      }
+
+      &.open {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+
+        &::before {
+          transform: rotate(45deg) translate(36px, -36px);
+          background: white;
+        }
+
+        &::after {
+          transform: rotate(-45deg) translate(39px, 33px);
+          background: white;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #252425;
+    z-index: 20;
+    top: -100%;
+    transition: all 0.5s ease-in-out;
+
+    &.open {
+      transition: all 0.5s ease-in-out;
+      top: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      li {
+        border-bottom: 1px solid white;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:active {
+          transition: all 0.3s ease-in-out;
+          background-color: #464447;
+        }
+      }
+    }
+  }
+
+  header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+    position: sticky;
+    top: 0;
+    background-color: #323133;
+
+    .logo {
+      background-image: url('./src/img/logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100%;
+      max-width: 500px;
+      margin-top: 15px;
+    }
+  }
+
+  main {
+    /* margin-top: 30px; */
+    margin: 35px 5vw 0;
+
+    .middle {
+      margin-bottom: 30px;
+
+      p {
+        font-size: 2rem;
+        font-weight: 600;
+
+        span {
+          color: #296386;
+        }
+      }
+    }
+
+    .btns {
+      margin: 60px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      a {
+        width: 80%;
+        max-width: 130px;
+        background-color: #1f5269;
+        margin-bottom: 30px;
+        padding: 20px 80px;
+        line-height: 20px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        font-size: 1.2rem;
+        white-space: nowrap;
+
+        i {
+          padding-left: 5px;
+          display: inline;
+        }
+      }
+    }
+
+    .foto {
+      height: 60vh;
+      background-image: url('./src/img/Stan\ con\ cubo\ y\ texto.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+
+    .skills {
+      margin: 40px 0;
+      font-size: 1.5rem;
+
+      h4 {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 100;
+        margin-bottom: 50px;
+      }
+
+      ul {
+        border-left: 5px solid white;
+        padding-left: 30vw;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

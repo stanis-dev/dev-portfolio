@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css"
+      integrity="sha512-AMDXrE+qaoUHsd0DXQJr5dL4m5xmpkGLxXZQik2TvR2VCVKT/XRPQ4e/LTnwl84mCv+eFm92UG6ErWDtGM/Q5Q=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Stanis, Web Developer</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="mobile-menu-btn" @click="toggleMobileMenu">
+        <div class="burger"></div>
+      </div>
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">PROYECTOS</a></li>
+          <li><a href="#">CARTA</a></li>
+          <li><a href="#">CONTACTO</a></li>
+        </ul>
+      </div>
+      <header>
+        <div class="logo"></div>
+        <!-- <nav class="mobile-menu">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PROYECTOS</a></li>
+            <li><a href="#">CARTA</a></li>
+            <li><a href="#">CONTACTO</a></li>
+          </ul>
+        </nav> -->
+      </header>
+      <main>
+        <section class="middle">
+          <p>
+            Hola. Soy <span>Stan</span>, un desarrollador
+            <span>web full-stack</span>
+          </p>
+        </section>
+        <section class="foto"></section>
+        <section class="btns">
+          <a>Github <i class="fab fa-github"></i></a>
+          <a>Curriculum <i class="fas fa-file-pdf"></i></a>
+        </section>
+        <section class="skills">
+          <h4>Skills:</h4>
+          <ul>
+            <li id="icon-vue">
+              <i style="color: #3fb27f" class="fab fa-vuejs"></i> Vue.js
+            </li>
+            <li id="icon-react">
+              <i style="color: #00d8ff" class="fab fa-react"></i> React.js
+            </li>
+            <li id="icon-angular">
+              <i style="color: #bd0e2d" class="fab fa-angular"></i> Angular
+            </li>
+            <li id="icon-js-vanilla">
+              <i style="color: #efd81d" class="fab fa-js-square"></i> JavaScript
+            </li>
+            <li id="icon-nodejs">
+              <i style="color: #6ea560" class="fab fa-node-js"></i> Node-js
+            </li>
+            <li id="icon-sass">
+              <i style="color: #c76494" class="fab fa-sass"></i> Sass
+            </li>
+            <li id="icon-css3">
+              <i style="color: #006fc0" class="fab fa-css3-alt"></i> CSS3
+            </li>
+            <li id="icon-html5">
+              <i style="color: #f16529" class="fab fa-html5"></i> HTML5
+            </li>
+            <li id="icon-git">
+              <i style="color: #e94e31" class="fab fa-git-alt"></i> Git
+            </li>
+            <li id="icon-ts">
+              <i style="color: #2f74c0" class="fas fa-circle-notch"></i>
+              TypeScript
+            </li>
+            <li id="icon-expressjs">
+              <i class="fas fa-circle-notch"></i> ExpressJs
+            </li>
+            <li id="icon-mongodb">
+              <i style="color: #429543" class="fas fa-circle-notch"></i> MongoDB
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
